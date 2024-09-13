@@ -1,0 +1,63 @@
+.modal-dialog {
+    position: fixed; 
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  */
+    margin: 0; 
+}
+
+.modal.fade .modal-dialog {
+    transform: none; /* Reset the initial transform from Bootstrap */
+}
+.modal.show .modal-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it when shown */
+}
+
+.window-style {
+    border: none; /* Remove Bootstrap's default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow to prevent content from showing outside the modal */
+    min-height: 90px;
+    min-width: 350px;
+}
+
+.window-style{
+    position: absolute; /* Make the windows absolute positioned */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center them initially */
+    display: none; /* Hide the windows initially */
+}
+
+.window-header {
+    background-color: #2e2b2b; /* Light gray background */
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px;
+    padding: 10px 15px;
+}
+
+.window-controls {
+    display: flex; /* Arrange buttons horizontally */
+    align-items: center;
+}
+
+.window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: none;
+}
+
+.window-control:nth-child(1) { /* Close button (red) */
+    background-color: #ff605c;
+}
+.window-control:nth-child(2) { /* Minimize button (yellow) */
+    background-color: #ffbd44;
+}
+.window-control:nth-child(3) { /* Maximize button (green) */
+    background-color: #00ca4e;
+}

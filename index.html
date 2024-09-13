@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="window.css">
+    <link rel="stylesheet" href="appbar.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column h-100 m-0 p-0">
+    <!-- NAVBAR -->
+    <nav class="navbar p-0 m-0" style="background: rgb(16, 17, 20);">
+        <div class=" container-fluid m-0 p-0">
+            <a class="navbar-brand bg-secondary p-0 m-0" href="#" ><img src="./nabar.jpeg" style="height:40px"></a>
+            <div class="d-flex flex-row m-0">
+
+                <div class="p-2 text-white" id="battery-status"><span id="battery-icon" class="material-icons">battery_full</span>
+                    <span class="text-white" id="battery-level"></span></div>
+
+                <div class="p-2 text-white" id="sound-status"><span id="sound-icon" class="material-icons">volume_up</span>
+                    <span id="sound-level"></span></div>
+
+                <div class="p-2 text-white" id="network-status"><span id="network-icon" class="material-icons">wifi</span>
+                    <span id="network-level"></span></div>
+                    <div class="p-2 text-white btn-download" onclick="downloadResume()"><span class="material-icons ">
+                        download
+                        </span></div>
+                <div class="p-2 text-white" id="time" >Time</div>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Body -->
+
+    <div id="body" class="bg-img flex-grow-1 d-flex align-items-center justify-content-center">
+        <div class="text-white">
+
+        </div>
+    </div>
+
+    <div id="windowTemplate" class="window-style dark-theme mydrag" style="display: none;">
+        <div class="window-header d-flex justify-content-between align-items-center">
+            <h5 class="window-title mx-auto"></h5>
+            <div class="window-controls">
+                <button type="button" class="window-control minimize-button" aria-label="Minimize"></button>
+                <button type="button" class="window-control maximize-button" aria-label="Maximize"></button>
+                <button type="button" class="window-control close-button" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body resizable-content">
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                  </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                                 </div>
+              </div>
+        </div>
+    </div>
+
+
+
+    
+    <div id="appbar" class="position-fixed p-2 bottom-0 start-50 translate-middle-x rounded-top justify-content-center">
+        <div class="d-md-flex justify-content-around collapse" id="appbarLinks"> 
+            <a href="#" data-bs-target="#experience" title="Experience"><span class="material-icons icon-color">work</span></a>
+            <a href="#" data-bs-target="#volunteers" title="Volunteers"><span class="material-icons icon-color">group</span></a>
+            <a href="#" data-bs-target="#certifications" title="Certification"><span class="material-icons icon-color">verified</span></a>
+            <a href="#" data-bs-target="#aboutMe" title="About Me"><span class="material-icons icon-color">account_box</span></a>
+            <a href="#" data-bs-target="#education" title="Education"><span class="material-icons icon-color">school</span></a>
+            <a href="#" data-bs-target="#projects" title="Projects"><span class="material-icons icon-color">account_tree</span></a>
+        </div>
+        <button class="navbar-toggler justify-content-center d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#appbarLinks" aria-controls="appbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons justify-content-center">apps</span>
+        </button>
+        
+    </div>
+   
+    <!-- Body END -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>
+
+    <!-- <div id="appbar" class="position-fixed p-2 bottom-0 start-50 translate-middle-x rounded-top justify-content-center">
+        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#appbarLinks" aria-controls="appbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="material-icons">
+                apps
+                </span>
+        </button>
+        <div class="collapse d-md-flex justify-content-around" id="appbarLinks">
+            <a href="#" data-bs-target="#experience" title="Experience"><span class="material-icons icon-color">work</span></a>
+            <a href="#" data-bs-target="#volunteers" title="Volunteers"><span class="material-icons icon-color">group</span></a>
+            <a href="#" data-bs-target="#certification" title="Certification"><span class="material-icons icon-color">verified</span></a>
+            <a href="#" data-bs-target="#aboutMe" title="About Me"><span class="material-icons icon-color">account_box</span></a>
+            <a href="#" data-bs-target="#education" title="Education"><span class="material-icons icon-color">school</span></a>
+            <a href="#" data-bs-target="#projects" title="Projects"><span class="material-icons icon-color">account_tree</span></a>
+       
+        </div>
+    </div> -->

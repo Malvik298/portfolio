@@ -1,0 +1,123 @@
+body, html { 
+    height: 100%; 
+    margin: 0; 
+    overflow: hidden;
+}
+
+/* #appbar a { 
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;  
+}
+
+#appbar{
+    background: linear-gradient(to bottom, rgba(229, 209, 209, 0.5), rgba(7, 6, 6, 0.5)); 
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.2), 
+        inset 0 2px 2px rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px)
+}
+
+#appbar i { 
+    font-size: 2rem;  
+    color: white; 
+    cursor: pointer; 
+} */
+.modal-backdrop{
+    display: none;
+}
+
+.resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    cursor: se-resize; /* Or other resize cursor depending on your design */
+  }
+.navbar-brand,
+.navbar .bg-success {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Media queries to adjust the size based on the screen width */
+@media (max-width: 768px) {
+    .navbar-brand,
+    .navbar .bg-success {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand,
+    .navbar .bg-success {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+.bg-img{
+    background-image: url("./bg.jpeg");
+    background-size: contain;
+    background-color: rgb(15, 14, 18);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+.dark-theme {
+    background-color: #212529; /* Dark background */
+    color: #fff; /* White text */
+}
+
+.dark-theme .modal-header {
+    background-color: #343a40; /* Darker header background */
+    border-bottom-color: #454d55; /* Darker border */
+}
+
+/* Dark theme button colors */
+.dark-theme .window-control:nth-child(1) { /* Close (dark red) */
+    background-color: #149947;
+}
+.dark-theme .window-control:nth-child(2) { 
+    background-color: #d79500;
+}
+.dark-theme .window-control:nth-child(3) { 
+    background-color: #c92a2a;
+}
+
+/* Optional: Darken the box-shadow */
+.dark-theme {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.icon-color {
+    color: #ffffff; 
+}
+ 
+
+
+.modal-content {
+    cursor: default; 
+}
+
+
+.modal-content:active { 
+    cursor: grabbing; 
+}
+
+
+.mydrag {
+    overflow: auto;
+}
+
+.btn-download:hover {
+    cursor: pointer;
+}
