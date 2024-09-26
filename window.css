@@ -41,6 +41,7 @@
 
 .window-controls {
     display: flex; /* Arrange buttons horizontally */
+    flex-direction: row;
     align-items: center;
 }
 
@@ -54,10 +55,25 @@
 
 .window-control:nth-child(1) { /* Close button (red) */
     background-color: #ff605c;
+
 }
+
 .window-control:nth-child(2) { /* Minimize button (yellow) */
     background-color: #ffbd44;
+
 }
+
 .window-control:nth-child(3) { /* Maximize button (green) */
     background-color: #00ca4e;
+
+}
+
+.ios-strech-fix
+{
+      height: intrinsic;
+}
+
+button {
+    -webkit-appearance: none; 
+    appearance: none; 
 }
